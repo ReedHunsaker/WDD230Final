@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&display=swap');
+* {
+    padding: 0;
+}
+:root{
+    --primary-color: #96C9DC;
+    --secondary-color: #437687;
+    --isActive: black;
+    --hover: #044254;
+    --button : #06871c;
+}
+html {
+    background-color: var(--primary-color);
+    color : white;
+}
+
+/* Small and All Screens */
+.Logo img {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+nav {
+	margin: 0 auto;
+    box-shadow: 0 0 25px rgba(0,0,0,0.51);
+	background-color: var(--secondary-color);
+}
+.navigation {
+	list-style: none;
+	padding: 0;
+}
+.navigation li:first-child {
+	display: block;
+}
+.navigation li {
+	display: none;
+    font-size: larger;
+}
+
+.ham img {
+    width: 25px;
+    height: 25px;
+    
+}
+
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	transition: 0.5s;
+}
+
+
+.navigation a:hover {
+	color: white;
+	background-color: var(--hover);
+}
+
+.navBar{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.title {
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+
+}
+
+
+/* Medium Screens */
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+    .Logo img {
+        width: 200px;
+        height: 200px;
+    }
+    .navigation {
+        display: flex;
+    }
+    .navigation li {
+        display: block; /* change state in small view */
+        flex: 1 1 auto;
+    }
+    .navigation a {
+        text-align: center;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    .navBar {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+
+    }
+    .title{
+        text-align: center;
+        font-size: 22pt;
+    }
+}
+
+
+/* Large Screens */
+@media only screen and (min-width: 1024px) {
+    .Logo img {
+        width: 200px;
+        height: 200px;
+    }
+    .navigation {
+        display: flex;
+    }
+    .navigation li {
+        display: block; /* change state in small view */
+        flex: 1 1 auto;
+    }
+    .navigation a {
+        text-align: center;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    .navBar {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+    }
+    .title{
+        text-align: center;
+        font-size: 22pt;
+    }
+    
+    
+
+}

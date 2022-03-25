@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&display=swap');
+* {
+padding: 0;
+}
+
+:root {
+    --primary-color: #044254;
+    --secondary-color: #4c5256;
+    --isActive: #E5BC40;
+    --hover: #044254;
+  }
+
+
+html{
+    background-color: var(--primary-color);
+    
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding: 2em;
+}
+p{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+nav {
+    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(0,0,0,0.51);
+    background-color: var(--secondary-color);
+    max-width: 900px;
+    
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+/* Class Selectors */
+
+/* nav ul li {
+    flex: 1;
+    
+    
+} */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 0.75em;
+    display: block;
+}
+
+.active {
+    background-color: var(--isActive);
+    color: black;
+}
+
+.active:hover {
+    color: white;
+    background-color: var(--hover);
+    
+}
+
+nav a:hover {
+    background-color: var(--hover);
+}
+
+
+.Scenarios{
+    text-align: justify;
+}
+.content{
+    padding-bottom: 1em;
+}
+
+th,td {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    letter-spacing: 1px;
+}
+.bg_color {
+    background-color: #96C9DC;
+    color: white;
+    font-weight: 400;
+}
+.mainDoc {
+    background-color: #96C9DC;
+}
+.nav{
+    background-color: #437687;
+    color: white;
+    font-weight: 400;
+}
+.nav_text {
+    background-color: white;
+    color: black;
+    font-weight: 400;
+}
+.nav_hover{
+    background-color: #044254;
+    color: white;
+    font-weight: 400;
+}
+.black {
+    background-color: white;
+    color: black;
+    font-weight: 400;
+}
+.contrast {
+    background-color: #E5BC40;
+    color: black;
+}
+.wireframe img, .siteMap img {
+    width: 500px;
+    height: auto;
+}
