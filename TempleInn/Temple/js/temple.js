@@ -92,6 +92,7 @@ function LoadLikes() {
     
     console.log(activeList)
     console.log(savedButtons)
+    saveLikes()
 }
 
 
