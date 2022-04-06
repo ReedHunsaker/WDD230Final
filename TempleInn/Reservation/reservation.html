@@ -8,10 +8,150 @@
         <meta name="description" content="Make reservations at the Temple Inn and Suits. Find information 
         about rooms, locations, and dates.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/reservation.css">
+        <link rel="shortcut icon" href="../img/favicon.png">
     </head>
     <body>
-        
-        <script src="" async defer></script>
+        <header>
+            <div class = "navBar">
+                <div class = "Logo">
+                    <img src = "../img/templeIcon.webp" alt = "TempleLogo">
+                </div>
+                <div class = "navLinks">
+                    <div class = "title">
+                        <h1>Temple Inn & Suits</h1>
+                    </div>
+                    <nav>
+                        <ul class = "navigation">
+                            <!-- fix the dark image here -->
+                            <li><a class="ham" href="#"><img src = "../img/down.png" alt ="down/up" class = "down"></a></li>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../Temple/temple.html">Temple</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="../Services/services.html">Services</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class = "content">
+            <div class = "formBlock">
+                <h2 class = "square">Reservation:</h2>
+            <form method = "get" action = "confrimation.html">
+                <p>* - Required elements</p>
+                <!-- id and for must be same. -->
+                <!-- name is for key value paris -->
+                <label for = "loc">Location: *</label>
+                <input id = "loc" name = "location" required>
+                <label for = "date">Date: *</label>
+                <input type = "date" id = "date" name = "stayDate" min="2015-01-01" max="2050-12-31" required>
+                <label for = "roomnums">Number of Rooms: *</label>
+                <input type = "number" id = "roomnums" name = "numOfRooms" min = "0" max = "10"  required>
+                <!-- radio buttons -->
+                <p>Room type</p>
+                <div class = "radioLevels">
+
+                    <div class = "radioLevel1">
+                    <label for = "radio1">Bronze Package</label>
+                    <input type = "radio" id = "radio1" name = "level" value = "level1">
+                    </div>
+                    <div class = "radioLevel2">
+                    <label for = "radio2">Silver Package</label>
+                    <input type = "radio" id = "radio2"  name = "level" value = "level2">
+                </div>
+                    <div class = "radioLevel3">
+                    <label for = "radio3">Gold Package</label>
+                    <input type = "radio" id = "radio3" name = "level" value = "level2">
+                </div>
+                </div>
+
+
+                <label for = "fname">First Name: *</label>
+                <input id = "fname" name = "firstname" required>
+    
+                <label for = "lname">Last Name: *</label>
+                <input id = "lname" name = "lastname" required>
+    
+                <!-- use regular expressions -->
+                
+    
+                <label for = "email">Email: *</label>
+                <input type = "email" id = "email" name = "email" placeholder="example@email.com" required>
+    
+                <label for = "phone">Phone Number: *</label>
+                <input id = "phone" type = "tel" name = "phone" required>
+    
+                <label for = "hstate">Home State or Country: *</label>
+                <input id = "hstate" name = "homeState" required>
+                
+    
+                <input type = "hidden" id = "time" value = "CurrentDate" name = "date">
+                <label for = "message">Special Accommodations / comments:</label>
+                <textarea id="message"></textarea>
+                <button id = "submitbtn">Submit</button>
+            </form>
+        </div>
+
+            <div class = "levels">
+                <div class = "level1desc">
+                    <h2>Bronze Package</h2>
+                    <p>Cozy up in a newly remodeled room with 2 queens. Available to fit your needs and budget </p>
+                    <h3>Perks: </h3>
+                    <ul class = "unstyled">
+                        <li>2 Queen Beds</li>
+                        <li>T.V.</li>
+                        <li>Shower and Vanity</li>
+                        <li>$80/Night</li>
+                    </ul>
+                </div>
+                <div class = "level2desc">
+                    <h2>Silver Package</h2>
+                    <p>Level up your stay with 2 king sized beds and a window view of the Temple.</p>
+                   <h3>Perks: </h3>
+                   <ul class = "unstyled">
+                       <li>2 King Beds</li>
+                       <li>View of Temple</li>
+                       <li>T.V.</li>
+                       <li>Shower/Bath Combo and Vanity</li>
+                       <li>$100/Night</li>
+                   </ul>
+                    
+                </div>
+                <div class = "level3desc">
+                    <h2>Gold Package</h2>
+                    <p>Premium package for those looking to fully enjoy their stay. Enjoy a balcony view of the temple with 1 king bed.</p>
+                   <h3>Perks: </h3>
+                   <ul class = "unstyled">
+                       <li>1 King Bed</li>
+                       <li>Balcony View of Temple</li>
+                       <li>T.V.</li>
+                       <li>Shower and Jacuzzi Bathtub</li>
+                       <li>$150/Night</li>
+                   </ul>
+                    
+                
+            </div>
+        </div>
+        </main>
+        <footer>
+            <div class = "footerContent">
+            <div class = "contact">
+                    <h3>Temple Inn & Suits</h3>
+                    <p>Phone: 201-555-3646</p>
+                    <p><a href = "https://www.google.com/maps/place/4800+Montgomery+Ln+%23300,+Bethesda,+MD+20814/data=!4m2!3m1!1s0x89b7c97b6b8f21f1:0x9a0b3cde14da0a60?sa=X&ved=2ahUKEwjU4P7E6un2AhVSK30KHd8MDRwQ8gF6BAgQEAE">Address: 4800 Montgomery Ln #300, Bethesda, MD 20814</a></p>
+            </div>
+            <div class = "social">
+                <h2>Socials</h2>
+                <a href ="https://www.google.com"><img src ="../img/facebook.png" alt = "facebook"></a>
+                <a href ="https://www.google.com"><img src ="../img/insta.png" alt = "Instagram"></a>
+            </div>
+        </div>
+            <div class = "info">
+                <p>Temple Inn & Suits | Reed Hunsaker | ©2022</p>
+            </div>
+        </footer>
+        <script src="js/reservation.js"></script>
     </body>
 </html>

@@ -8,7 +8,6 @@
     --isActive: black;
     --hover: #044254;
     --button : #eeff04;
-    --weatherSquare : rgb(212, 212, 212);
 }
 html {
     background-color: var(--primary-color);
@@ -90,18 +89,13 @@ nav {
 	transition: 0.5s;
 }
 
-.content{
-    margin: 20px;
-}
 
 .navigation a:hover {
 	color: white;
 	background-color: var(--hover);
 }
 
-/* the onclick JS toggles the .reponsive class from display none (.navigation li) to display block because the responsive class is added to the end of the class list like this in HTML.
-  <ul class="navigation responsive">
-*/
+
 .responsive li {
 	display: block;
 }
@@ -125,44 +119,6 @@ nav {
     box-shadow: 1px 1px 4px 1px #888;
     margin: 10px;
 }
-.hero {
-    position: relative;
-}
-.hero img {
-    width: 400px;
-    /* padding: 20px; */
-    margin: 10px;
-    
-    box-shadow: 0 0 25px rgba(0,0,0,0.51);
-}
-.reservebtnHero
-{
-    position: absolute;
-    bottom: 32px;
-    right: 42px;
-}
-.whiteSquare {
-    background-color: var(--weatherSquare);
-}
-button {
-    background-color: var(--button);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 55px;
-    padding-right: 55px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 15px 2px;
-    border-radius: 8px;
-}
-
-.social img {
-    width: 50px;
-    height: 50px;
-    
-}
 footer {
     
     background-color: white;
@@ -183,72 +139,132 @@ footer {
     border-radius: 10px;
     font-weight: 700;
 }
-.activities img {
-    width: 90%;
-}
-#slider {
-    position: relative;
-    width: 300px;
-    height: 230px;
-    margin: auto;
-  
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  }
-#slider ul {
-position: relative;
-list-style: none;
-height: 100%;
-width: 10000%;
-padding: 0;
-margin: 0;
-transition: all 750ms ease;
-left: 0;
-}
-#slider ul li {
-position: relative;
-height: 100%;
-
-float: left;
-}
-#slider ul li img{
-    width: 300px;
-    height: 230px;
-  }
-#slider #prev, #slider #next {
+.social img {
     width: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    border-radius: 50%;
-    font-size: 2rem;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    transform: translateY(-25%);
-    transition: all 150ms ease;
-  }
-  #slider #prev {
-    left: 10px;
-  }
-  #slider #next {
-    right: 10px;
-  }
-  
-  #slider #prev:hover, #slider #next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0;
-  }
-.today table {
-    margin: auto;
+    height: 50px;
+    
 }
-.forcast table {
-    border-spacing: 10px;
-    border-collapse: separate;
+.btnsRes {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.btnsRes p {
+    margin: auto;
+    font-size: 1.5rem;
+}
+.btnsRes a {
+    padding: 8px;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+.btnsRes a:hover{
+    background-color: white;
+    color: black;
 }
 
-/* Medium Screens */
+.conContent {
+    max-width: 600px;
+    margin: 10px auto;
+    
+}
+.formBlock{
+    max-width: 500px;
+    margin: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 480px;
+    background-color: rgba(0,0,0,0.10);
+    border-radius: 2em;
+}
+input {
+    padding: 0.5em;
+}
+
+label {
+    text-align: left;
+    padding: 10px;
+}
+
+#submitbtn {
+    padding: 20px;
+    margin: 10px;
+    font-size: 1.5em;
+}
+textarea {
+    padding: 20px;
+}
+
+.levels {
+    display: block;
+    background-color: rgba(0,0,0,0.10);
+    font-size: 1.2em;
+    padding: 15px;
+    text-align: center;
+
+}
+.unstyled {
+    list-style: none;
+}
+.level1desc, .level2desc, .level3desc {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.20);
+    border-style: solid;
+    border-width: 2px;
+}
+
+.level1desc:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.level2desc:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.level3desc:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.formBlock {
+    display: block;
+}
+.radioLevels {
+    font-size: 1.1em;
+}
+
+.radioLevel1 {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.20);
+}
+.radioLevel2 {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.20);
+}
+.radioLevel3 {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.20);
+}
+.radioLevel1:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.radioLevel2:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.radioLevel3:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
     .Logo img {
         width: 200px;
@@ -276,25 +292,7 @@ float: left;
         text-align: center;
         font-size: 22pt;
     }
-    .left, .groupA {
-        display: flex;
-       justify-content: center; 
-    }
-    .social{
-        display: none;
-    }
-    .hero img {
-        width: 850px;
-        
-    }
-    .forcast table {
-        margin: auto;
-    }
 }
-
-
-
-/* Large Screens */
 @media only screen and (min-width: 1024px) {
     .Logo img {
         width: 200px;
@@ -321,22 +319,11 @@ float: left;
         text-align: center;
         font-size: 22pt;
     }
-    .hero img {
-        width: 55vw;
-        height: 520px;
-        
-    }
     .content {
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        justify-content: center;
-    }
-    html {
-        padding: 10px;
-    }
-    .templePhotos, .forcast, .today {
-        padding: 0;
-        padding-top: 2px;
-        padding-bottom: 5px;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: 0 auto;
+        
     }
 }

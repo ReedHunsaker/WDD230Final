@@ -8,6 +8,7 @@
         Our services include indoor pool, temple shuttle, and family history consultation.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="shortcut icon" href="img/favicon.png">
     </head>
     <body>
         <header>
@@ -33,11 +34,126 @@
                 </div>
             </div>
         </header>
-        <body>
+        <main>
+            <div class = "content">
+                <div class = "left">
+                    <div class ="reservation square">
+                        <h2>Make Reservation</h2>
+                        <p>Reserve your stay at the Temple Inn & Suits</p>
+                        <button type ="button" id = "reserve1">Reserve</button>
+                    </div>
+                    <div class ="highlightActivity">
 
-        </body>
+                    
+                    <div class = "activities square">
+                        <h2>Activities:</h2>
+                        <h3>1950s Census Project</h3>
+                        <img src = "img/act.jpg" alt = "activity">
+                        <p>Learn more at <a href = "https://www.familyhistory.org">www.familyhistory.org</a></p>
+                    </div>
+                 </div>
+                    <div class = "social square">
+                        <h2>Socials</h2>
+                        <a href ="https://www.google.com"><img src ="img/facebook.png" alt = "facebook"></a>
+                        <a href ="https://www.google.com"><img src ="img/insta.png" alt = "Instagram"></a>
+                    </div>
+                </div>
+                <div class ="center">
+                    <div class ="hero">
+                        <img src = "img/philippines.jpg" alt = "philippines temple">
+                        <button type ="button" class = "reservebtnHero" id = "reserve">Reserve</button>
+                    </div>
+                    <div class = "summary square">
+                        <h2>About Temle Inn & Suits</h2>
+                        <p>The Temple Inn & Suites is a hotel chain headquartered in Bethesda, MD that builds and manages specialized hotel accommodations near temple locations of The Church of Jesus Christ of Latter-day Saints around the world. The owner-operated company caters to temple workers, patrons, and their families by providing specialized services and accommodations that meet the needs of those patrons. The hotel accommodations and services are available to anyone willing to abide by the terms and policies outlined by the company. The overall goal of the website project is to promote and provide information about the specialized services that this hotel chain offers to meet the needs of temple patrons who come to serve in the temple or who participate in events such as sealings, weddings, receptions, and youth trips. 
+                            
+                            
+
+                            </p>
+                            
+                    </div>
+                </div>
+                <div class = "right">
+                    <div class ="groupA">
+
+                    
+                    <div class = "templePhotos square">
+                    <h2>Temples</h2>
+                    
+                    <div id = "slider">
+                        <ul id="slideWrap"> 
+                            <li><img src="img/salt.jpeg" alt=""></li>
+                            <li><img src="img/merd.jpeg" alt=""></li>
+                            <li><img src="img/sand.jpeg" alt=""></li>
+                        </ul>
+                        <a id="prev" href="#templePhotos">&#8810;</a>
+                        <a id="next" href="#templePhotos">&#8811;</a>
+                    </div>
+                </div>
+                    <div class = "today square whiteSquare">
+                        <h2>Today's weather: </h2>
+                        <table>
+                            <tr>
+                                <th><span id ="todayDate"></span></th>
+                            </tr>
+                            <tr>
+                                <td><span id = "weatherimg"></span></td>
+                            </tr>
+                            <tr>
+                                <td>High | Low</td>
+                            </tr>
+                            <tr>
+                                <td><span id = "weatherh"></span>°F | <span id = "weatherl"></span>°F</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                    <div class = "forcast square whiteSquare">
+                        <h2>Three Day Forcast</h2>
+                        <table>
+                            <tr>
+                                <th><span id = "day1"></span></th>
+                                <th><span id = "day2"></span></th>
+                                <th><span id = "day3"></span></th>
+                            </tr>
+                            <tr>
+                                <td><span id = "day1img"></span></td>
+                                <td><span id = "day2img"></span></td>
+                                <td><span id = "day3img"></span></td>
+                            </tr>
+                            <tr>
+                                <td>High: <span id = "day1temph"></span>°F</td>
+                                <td>High: <span id = "day2temph"></span>°F</td>
+                                <td>High: <span id = "day3temph"></span>°F F</td>
+                            </tr>
+                            <tr>
+                                <td> Low: <span id = "day1templ"></span>°F</td>
+                                <td> Low: <span id = "day2templ"></span>°F</td>
+                                <td>Low: <span id = "day3templ"></span>°</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
         <footer>
-
+            <div class = "footerContent">
+            <div class = "contact">
+                    <h3>Temple Inn & Suits</h3>
+                    <p>Phone: 201-555-3646</p>
+                    <p><a href = "https://www.google.com/maps/place/4800+Montgomery+Ln+%23300,+Bethesda,+MD+20814/data=!4m2!3m1!1s0x89b7c97b6b8f21f1:0x9a0b3cde14da0a60?sa=X&ved=2ahUKEwjU4P7E6un2AhVSK30KHd8MDRwQ8gF6BAgQEAE">Address: 4800 Montgomery Ln #300, Bethesda, MD 20814</a></p>
+            </div>
+            <div class = "social">
+                <h2>Socials</h2>
+                <a href ="https://www.google.com"><img src ="img/facebook.png" alt = "facebook"></a>
+                <a href ="https://www.google.com"><img src ="img/insta.png" alt = "Instagram"></a>
+            </div>
+        </div>
+            <div class = "info">
+                <p>Temple Inn & Suits | Reed Hunsaker | ©2022</p>
+            </div>
         </footer>
         
         <script src="js/index.js"></script>

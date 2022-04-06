@@ -8,7 +8,9 @@
     --isActive: black;
     --hover: #044254;
     --button : #eeff04;
-    --weatherSquare : rgb(212, 212, 212);
+    --red: rgb(209, 3, 3);
+    --white: #fff;
+    --black: #000;
 }
 html {
     background-color: var(--primary-color);
@@ -83,21 +85,18 @@ nav {
 .navigation a {
 	display: block;
 	padding: 0.75rem;
-	text-align: left;
 	text-decoration: none;
 	color: white;
 	font-weight: 700;
 	transition: 0.5s;
 }
 
-.content{
-    margin: 20px;
-}
 
 .navigation a:hover {
 	color: white;
 	background-color: var(--hover);
 }
+
 
 /* the onclick JS toggles the .reponsive class from display none (.navigation li) to display block because the responsive class is added to the end of the class list like this in HTML.
   <ul class="navigation responsive">
@@ -123,45 +122,7 @@ nav {
     padding: 20px;
     text-align: center;
     box-shadow: 1px 1px 4px 1px #888;
-    margin: 10px;
-}
-.hero {
-    position: relative;
-}
-.hero img {
-    width: 400px;
-    /* padding: 20px; */
-    margin: 10px;
-    
-    box-shadow: 0 0 25px rgba(0,0,0,0.51);
-}
-.reservebtnHero
-{
-    position: absolute;
-    bottom: 32px;
-    right: 42px;
-}
-.whiteSquare {
-    background-color: var(--weatherSquare);
-}
-button {
-    background-color: var(--button);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 55px;
-    padding-right: 55px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 15px 2px;
-    border-radius: 8px;
-}
-
-.social img {
-    width: 50px;
-    height: 50px;
-    
+    margin: 10px
 }
 footer {
     
@@ -183,72 +144,105 @@ footer {
     border-radius: 10px;
     font-weight: 700;
 }
-.activities img {
-    width: 90%;
-}
-#slider {
-    position: relative;
-    width: 300px;
-    height: 230px;
-    margin: auto;
-  
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  }
-#slider ul {
-position: relative;
-list-style: none;
-height: 100%;
-width: 10000%;
-padding: 0;
-margin: 0;
-transition: all 750ms ease;
-left: 0;
-}
-#slider ul li {
-position: relative;
-height: 100%;
-
-float: left;
-}
-#slider ul li img{
-    width: 300px;
-    height: 230px;
-  }
-#slider #prev, #slider #next {
+.social img {
     width: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    border-radius: 50%;
-    font-size: 2rem;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    transform: translateY(-25%);
-    transition: all 150ms ease;
-  }
-  #slider #prev {
-    left: 10px;
-  }
-  #slider #next {
-    right: 10px;
-  }
-  
-  #slider #prev:hover, #slider #next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0;
-  }
-.today table {
-    margin: auto;
-}
-.forcast table {
-    border-spacing: 10px;
-    border-collapse: separate;
+    height: 50px;
+    
 }
 
-/* Medium Screens */
+.square img {
+    width: 200px;
+    height: auto;
+
+}
+.square ul {
+    list-style-type: none;
+}
+.btn {
+    width: 100px; height: 44px;
+    outline: 0;
+    border: 2px solid #ccc;
+    color: #000;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
+    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+}
+.btn:hover {
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--red);
+}
+.btn-like {
+    padding: 0.8rem 0.8rem 0.8rem 4rem;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    background: #fff;
+    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+}
+.btn-like.liked {
+    background: var(--red);
+    border-color: var(--red);
+    
+    
+}
+/*-- Button Icon -- */
+.btn-icon {
+    display: inline-block;
+    width: 32px;
+    height: 36px;
+    position: absolute;
+    left: 0.5rem;
+    transition: 1s cubic-bezier(.21,.04,.26,.99);
+    transform: rotate(0deg)
+}
+.btn:hover .btn-icon {
+    color: var(--red);
+}
+.btn.liked:hover .btn-icon {
+    color: var(--black);
+}
+.liked .btn--icon-default {
+    transform: rotate(-90deg)
+}
+.btn:not(.liked).btn--icon-liked {
+    transform: rotate(-90deg)
+}
+.liked .btn--icon-default,
+.btn--icon-liked {
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+}
+.btn--icon-default,
+.liked .btn--icon-liked {
+    opacity: 1;
+    left: 0.5rem;
+}
+.btn-content {
+    transition: transform 0.1s ease;
+    display: inline-block;
+}
+.liked .btn-content {
+    color: var(--white);
+}
+.btn:hover.liked .btn-content {
+    color: var(--black);
+}
+.btn:not(.liked) .btn-content--liked {
+    transform: translate(110px)
+}
+.btn:not(.liked) .btn-content--default {
+    transform: translate(-56px)
+}
+.liked .btn-content--default {
+    transform: translate(24px)
+}
+
+
+
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
     .Logo img {
         width: 200px;
@@ -276,25 +270,14 @@ float: left;
         text-align: center;
         font-size: 22pt;
     }
-    .left, .groupA {
-        display: flex;
-       justify-content: center; 
+    .historyServices{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    .social{
-        display: none;
-    }
-    .hero img {
-        width: 850px;
-        
-    }
-    .forcast table {
-        margin: auto;
+    .historyServices h4 {
+        grid-row: 1/1;
     }
 }
-
-
-
-/* Large Screens */
 @media only screen and (min-width: 1024px) {
     .Logo img {
         width: 200px;
@@ -321,22 +304,20 @@ float: left;
         text-align: center;
         font-size: 22pt;
     }
-    .hero img {
-        width: 55vw;
-        height: 520px;
-        
-    }
-    .content {
+    .historyServices{
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        justify-content: center;
+        grid-template-columns: 1fr 1fr;
     }
-    html {
-        padding: 10px;
+    .historyServices h4 {
+        grid-row: 1/1;
     }
-    .templePhotos, .forcast, .today {
-        padding: 0;
-        padding-top: 2px;
-        padding-bottom: 5px;
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .square img {
+        width: 300px;
+        height: auto;
+    
     }
 }
