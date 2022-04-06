@@ -55,7 +55,7 @@ const button = document.querySelectorAll(".btn")
 let activeList = [0,0,0,0]
 
 
-if(!localStorage.getItem("visit")){
+if(!localStorage.getItem("buttons")){
     saveLikes()
     LoadLikes()
 } else {
@@ -82,7 +82,7 @@ function saveLikes() {
 }
 
 function LoadLikes() {
-    let savedButtons = localStorage.getItem("buttons").replace(',', '').replace(',','').replace(',','').replace(',','')
+    let savedButtons = localStorage.getItem("buttons").replace(',', '').replace(',','').replace(',','')
     for (const x of Array(4).keys()) {
         activeList[x] = savedButtons[x]
         if (activeList[x] == 1){
@@ -92,7 +92,6 @@ function LoadLikes() {
     
     console.log(activeList)
     console.log(savedButtons)
-    saveLikes()
 }
 
 
